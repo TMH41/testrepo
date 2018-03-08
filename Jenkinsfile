@@ -1,9 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('stage 1') {
       steps {
-        ws(dir: 'C:\\Temp\\Workspace\\')
+        echo 'hello'
+      }
+    }
+    stage('stage 2') {
+      steps {
+        build 'stage_compile'
       }
     }
   }
